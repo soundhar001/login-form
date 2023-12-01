@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Sign Up</h2>
+        <form class="login-form" autocomplete="on" method="POST" action="/home/">
+            {% csrf_token %}
+            <input type="text" placeholder="Name" name="full_name">
+            <input type="number" placeholder="Age" name="age">
+            <input type="email" placeholder="Email" name="email">
+            <input type="tel" placeholder="Phone" name="phone">
+            <input type="submit" class="submit" style="margin-top:15px; " value="Sign Up ">
+        </form>
+    </div>
+</body>
+
+</html>

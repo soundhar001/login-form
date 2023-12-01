@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Attractive Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        nav {
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .cta-button:hover {
+            background: #555;
+        }
+        
+        .featured {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            flex-basis: calc(33.33% - 20px);
+            margin: 10px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+        }
+        
+        .feature p {
+            margin-top: 10px;
+        }
+        
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Attractive Homepage</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Welcome to our website!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et viverra velit. Sed malesuada, lectus nec viverra suscipit, tortor odio consequat est, non fermentum libero nunc at libero.</p>
+            <a class="cta-button" href="#">Learn More</a>
+        </div>
+        {% for signup in signup_data %} {{signup.Full_name}} {{signup.Age}} {{signup.Email}} {{signup.Phone}} {% endfor %}
+        <div class="featured">
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 3</h3>
+                <p>Description of feature 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 My Awesome Company. All rights reserved.
+    </div>
+</body>
+
+</html>
